@@ -1,0 +1,55 @@
+{
+  "BOTTON": {
+    "BACK": "VOLVER",
+    "CANCEL": "Cancelar",
+    "EDIT": "Editar",
+    "LOGIN": "Login",
+    "SAVE": "Guardar",
+    "SEARCH": "Buscar"
+  },
+  "FORMS": {
+    "LABELS": {
+      "ADD_DATE": "Fecha de ingreso",
+      "COLOR": "Color",
+      "EMAIL": "Email",
+      "FILTER": "FILTRO",
+      "MODEL": "Modelo",
+      "PASSWORD": "Password",
+      "STATE": "Estado",
+      "VEHICLE_BRAND": "Marca"
+    }
+  },
+  "HEADER": {
+    "HOME": "Home"
+  },
+  "LABELS": {
+    "REQUIRED_FIELD": "Campo Requerido"
+  },
+  "MENU": {
+    "HOME": "Home",
+    "LOGOUT": "Logout",
+    "PERSON": "Perfil"
+  },
+  "TABLES": {
+    "COLUMN": {
+      "ACTIONS": "Acciones",
+      "ADD_DATE": "Fecha de ingreso",
+      "COLOR": "Color",
+      "MODEL": "Modelo",
+      "STATE": "Estado",
+      "VEHICLE_BRAND": "Marca"
+    }
+  },
+  "TEXT_LOGIN": {
+    "SIGN_IN_GOOGLE": " Sign In with Google",
+    "WRONG_USER_PASSWORD": "Nombre de usuario o contraseña incorrecto. Por favor, intentelo nuevamente"
+  },
+  "TITLE": {
+    "CHANGE_PASSWORD": "Cambiar contraseña",
+    "CREATE_VEHICLE": "Crear Vehiculo",
+    "EDIT_VEHICLE": "Editar Vehiculo",
+    "LIST_VEHICLE": "Listado de vehiculos",
+    "USER": "Usuario",
+    "WELCOME": "Welcome"
+  }
+}

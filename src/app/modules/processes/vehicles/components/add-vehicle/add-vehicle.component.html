@@ -1,0 +1,78 @@
+<div class="container-principal">
+  <div class="cw-section-main">
+    <div class="cw-section ml-10px">
+      <p class="page-title">{{titleName | translate}}</p>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 _mat-animation-noopable col-lg-12 col-xl-12 mt-3">
+        <div class="cw-section mt-3 ml-10px">
+          <form [formGroup]="form">
+            <div class="row">
+              <div class="col-sm-12 col-md-12">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11">
+                    <mat-form-field appearance="outline" class="cw-mat-full-with">
+                      <input matInput placeholder="{{'FORMS.LABELS.VEHICLE_BRAND' | translate}}"
+                        formControlName="marca">
+                      <mat-error *ngIf="form.get('marca')?.hasError('required')">
+                        {{ 'LABELS.REQUIRED_FIELD' | translate}}</mat-error>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11">
+                    <mat-form-field appearance="outline" class="cw-mat-full-with">
+                      <input min="0" type="number" matInput placeholder="{{'FORMS.LABELS.MODEL' | translate}}" formControlName="modelo">
+                      <mat-error *ngIf="form.get('modelo')?.hasError('required')">
+                        {{ 'LABELS.REQUIRED_FIELD' | translate}}</mat-error>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11">
+                    <mat-form-field appearance="outline" class="cw-mat-full-with">
+                      <input matInput placeholder="{{'FORMS.LABELS.COLOR' | translate}}" formControlName="color">
+                      <mat-error *ngIf="form.get('color')?.hasError('required')">
+                        {{ 'LABELS.REQUIRED_FIELD' | translate}}</mat-error>
+                    </mat-form-field>
+                  </div>
+                  <div class="ml-20px col-sm-12 col-md-12 col-lg-12 col-xl-11 d-flex justify-content-end">
+                    <input formControlName="fechaIngreso" placeholder="{{'FORMS.LABELS.ADD_DATE' | translate}}" matInput
+                      [matDatepicker]="picker">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </div>
+                  <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-11">
+                    <mat-form-field appearance="outline" class="cw-mat-full-with">
+                      <mat-select formControlName="estado" placeholder="{{ 'FORMS.LABELS.STATE' | translate }}">
+                        <mat-option *ngFor="let estados of arrayEstado" [value]="estados.name">
+                          {{estados.name}}
+                        </mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="form.get('estado')?.hasError('required')">
+                        {{ 'LABELS.REQUIRED_FIELD' | translate}}</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class=" mt-2rem ml-10px w-40 d-flex ">
+          <div class="w-50">
+            <button (click)="confirmOption(false)" class="w-60" mat-menu-item>
+              <mat-icon>keyboard_backspace</mat-icon><span>{{ 'BOTTON.BACK' | translate}}</span>
+            </button>
+          </div>
+          <div class="w-50 d-flex justify-content-end">
+            <button *ngIf="!isEditActivate" class="btn-save btn ml-10px" mat-raised-button (click)="confirmOption(true)"
+              [disabled]="!form.valid || isLoading">
+              <mat-icon>save</mat-icon>
+              {{ 'BOTTON.SAVE' | translate}}
+            </button>
+            <button [disabled]="isLoading" *ngIf="isEditActivate" class="btn-save btn ml-10px" mat-raised-button
+              (click)="editActivate()">
+              {{ 'BOTTON.EDIT' | translate}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+
+
+// Bootstrap main SCSS
+@import "~bootstrap/scss/bootstrap.scss";
+
+@import "./custom-pulpo/variables";
+
+@import "./custom-pulpo/utilities";
+@import "./custom-pulpo/forms";
+@import "./custom-pulpo/general";
