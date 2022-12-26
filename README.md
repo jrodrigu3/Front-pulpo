@@ -10,7 +10,7 @@ Dudas o sugerencia.
 https://jrodrigu3.github.io
 
 Backend usado para la pruebas de PULPO
-- Este este link encontrarás el Front https://github.com/jrodrigu3/back-pulpo-test
+- Este este link encontrarás el back https://github.com/jrodrigu3/back-pulpo-test
 
 
 ## Tegnologias extras usadas
